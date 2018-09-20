@@ -14,7 +14,7 @@ client.on('ready', () => {
   console.log('---------------')
 });
 
-const prefix = "13"
+const prefix = "m"
 client.on('message', async msg => {
 	if (msg.author.bot) return undefined;
 	
@@ -315,7 +315,7 @@ client.on('message', function(message) {
 
 client.on('message', async message => {
             if(!message.channel.guild) return;
-             if (message.content.startsWith("13")) {
+             if (message.content.startsWith("m")) {
 let args = message.content.split(' ').slice(1).join(' ');
             let sigMessage = await args;
             
