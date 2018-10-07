@@ -365,7 +365,7 @@ client.on('message',async message => {
 
 var Discord = require("discord.js")
 var client = new Discord.Client();
-const devs = ["488334414124810240","456626501182291978"];
+const devs = ["488334414124810240"];
 const adminprefix = "T"
 client.on('message', message => {
     var argresult = message.content.split(`).slice(1).join(' ');
