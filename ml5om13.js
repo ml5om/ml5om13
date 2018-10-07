@@ -363,37 +363,40 @@ client.on('message',async message => {
 
 
 
-const adminprefix = "488334414124810240","456626501182291978"
+var Discord = require("discord.js")
+var client = new Discord.Client();
+const devs = ["488334414124810240","456626501182291978"];
+const adminprefix = "T"
 client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!developers.includes(message.author.id)) return;
+    var argresult = message.content.split(`).slice(1).join(' ');
+      if (!developer.includes(message.author.id)) return;
       
   if (message.content.startsWith(adminprefix + 'ply')) {
     client.user.setGame(argresult);
-      message.channel.send(`**✅   ${argresult}**`)
+      message.channel.send(?   ${argresult})
   } else 
      if (message.content === (adminprefix + "leave")) {
     message.guild.leave();        
   } else  
   if (message.content.startsWith(adminprefix + 'wt')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.send(`**✅   ${argresult}**`)
+      message.channel.send(?   ${argresult})
   } else 
   if (message.content.startsWith(adminprefix + 'ls')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.send(`**✅   ${argresult}**`)
+      message.channel.send(?   ${argresult})
   } else 
   if (message.content.startsWith(adminprefix + 'st')) {
     client.user.setGame(argresult, "https://www.twitch.tv/istvzazi");
-      message.channel.send(`**✅**`)
+      message.channel.send(?)
   }
   if (message.content.startsWith(adminprefix + 'setname')) {
   client.user.setUsername(argresult).then
-      message.channel.send(`Changing The Name To ..**${argresult}** `)
+      message.channel.send(Changing The Name To ..${argresult} )
 } else
 if (message.content.startsWith(adminprefix + 'setavatar')) {
   client.user.setAvatar(argresult);
-    message.channel.send(`Changing The Avatar To :**${argresult}** `);
+    message.channel.send(Changing The Avatar To :${argresult} `);
 }
 });
 
@@ -402,7 +405,7 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 
 client.on('message', async message => {
             if(!message.channel.guild) return;
-             if (message.content.startsWith("$")) {
+             if (message.content.startsWith("T")) {
 let args = message.content.split(' ').slice(1).join(' ');
             let sigMessage = await args;
             
