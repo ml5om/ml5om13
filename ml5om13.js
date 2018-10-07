@@ -355,7 +355,7 @@ client.on('message',async message => {
 
 
 const devs = ["488334414124810240"];
-const adminprefix = "T"
+const adminprefix = "$"
 client.on('message', message => {
     var argresult = message.content.split(`).slice(1).join(' ');
       if (!developer.includes(message.author.id)) return;
@@ -392,7 +392,7 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 
 client.on('message', async message => {
             if(!message.channel.guild) return;
-             if (message.content.startsWith("T")) {
+             if (message.content.startsWith("$")) {
 let args = message.content.split(' ').slice(1).join(' ');
             let sigMessage = await args;
             
