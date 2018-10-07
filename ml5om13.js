@@ -364,7 +364,6 @@ client.on('message',async message => {
 
 
 const developers = ["488334414124810240","456626501182291978"]
-const adminprefixe = "$";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
