@@ -342,5 +342,24 @@ function play(guild, song) {
   
 
 
+client.on('message',async message => {
+    if(message.content.startsWith(prefix + "restart")) {
+        if(message.author.id !== "488334414124810240") return message.reply('You aren\'t the bot owner.');
+        message.channel.send('**Restarting.**').then(msg => {
+            setTimeout(() => {
+               msg.edit('**Restarting..**');
+            },1000);
+            setTimeout(() => {
+               msg.edit('**Restarting...**');
+            },2000);
+        });
+        console.log(`${message.author.tag} [ ${message.author.id} ] has restarted the bot.`);
+        console.log(`Restarting..`);
+        setTimeout(() => {
+            client.destroy();
+        },3000);
+    }
+});
+
 
 client.login(process.env.BOT_TOKEN);
