@@ -363,8 +363,6 @@ client.on('message',async message => {
 
 
 
-var Discord = require("discord.js")
-var client = new Discord.Client();
 const devs = ["488334414124810240"];
 const adminprefix = "T"
 client.on('message', message => {
